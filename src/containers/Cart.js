@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { removeFromCart } from '../actions'
 import { getTotal, getCartProducts } from '../reducers'
 import Product from '../components/Product'
+import CartCounter from './CartCounter'
 
 const Cart  = ({ products, total, onCheckoutClicked, removeFromCart }) => {
   const hasProducts = products.length > 0
@@ -13,10 +14,14 @@ const Cart  = ({ products, total, onCheckoutClicked, removeFromCart }) => {
         <Product
           title={product.title}
           price={product.price}
-          // quantity={product.quantity}
+          quantity={product.quantity}
 
         />
         <button onClick={() => removeFromCart(product.id)} />
+        <CartCounter
+          count={product.quantity}
+          productId={product.id}
+          />
       </div>
     )
   ) : (
