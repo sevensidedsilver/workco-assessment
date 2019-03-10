@@ -1,7 +1,33 @@
+
+
+.productItem {
+    background: white;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+
+img.productImage {
+    max-width: 100%;
+}
+
+.addToCart {
+  background-color: #5E97D1;
+  border: none;
+}
+
 @media only screen and (max-width: 768px) {
   body {
+    margin: 0 16px 0;
     h2 {
         font-size: 1.4em;
     }
   }
+  .addToCart {
+    background-color: #5E97D1;
+    border: none;
+    border-radius: 15px;
+    height: 30px;
+  }
+
 }
