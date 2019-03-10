@@ -1,7 +1,9 @@
+import omit from 'lodash.omit'
 import {
   ADD_TO_CART,
   CHECKOUT_REQUEST,
-  CHECKOUT_FAILURE
+  CHECKOUT_FAILURE,
+  REMOVE_FROM_CART
 } from '../constants/ActionTypes'
 
 const initialState = {
@@ -16,6 +18,13 @@ const addedIds = (state = initialState.addedIds, action) => {
         return state
       }
       return [ ...state, action.productId ]
+    // 
+    // case REMOVE_FROM_CART:
+    //   if (state.quantityById.action.productId === 1){
+    //     console.log("asdf")
+    //     return state
+    //   }
+    //   return state
     default:
       return state
   }
@@ -28,6 +37,8 @@ const quantityById = (state = initialState.quantityById, action) => {
       return { ...state,
         [productId]: (state[productId] || 0) + 1
       }
+    case REMOVE_FROM_CART:
+      return omit(state, action.productId)
     default:
       return state
   }
