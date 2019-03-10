@@ -11,20 +11,20 @@ const initialState = {
   quantityById: {}
 }
 
-const addedIds = (state = initialState.addedIds, action) => {
+const addedIds = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TO_CART:
       if (state.indexOf(action.productId) !== -1) {
         return state
       }
       return [ ...state, action.productId ]
-    // 
-    // case REMOVE_FROM_CART:
-    //   if (state.quantityById.action.productId === 1){
-    //     console.log("asdf")
-    //     return state
-    //   }
-    //   return state
+
+    case REMOVE_FROM_CART:
+      let ref = action.productId
+      console.log(state)
+      console.log(ref)
+
+      return state
     default:
       return state
   }
@@ -47,7 +47,7 @@ const quantityById = (state = initialState.quantityById, action) => {
 export const getQuantity = (state, productId) =>
   state.quantityById[productId] || 0
 
-export const getAddedIds = state => state.addedIds
+export const getAddedIds = state => Object.keys(state.quantityById)
 
 const cart = (state = initialState, action) => {
   switch (action.type) {
