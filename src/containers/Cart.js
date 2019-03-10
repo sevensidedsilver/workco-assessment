@@ -13,7 +13,7 @@ const Cart  = ({ products, total, onCheckoutClicked, removeFromCart }) => {
         <Product
           title={product.title}
           price={product.price}
-          quantity={product.quantity}
+          // quantity={product.quantity}
 
         />
         <button onClick={() => removeFromCart(product.id)} />

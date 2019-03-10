@@ -21,7 +21,7 @@ const addedIds = (state = initialState, action) => {
 
     case REMOVE_FROM_CART:
       let ref = action.productId
-      console.log(state)
+      console.log()
       console.log(ref)
 
       return state
@@ -47,7 +47,9 @@ const quantityById = (state = initialState.quantityById, action) => {
 export const getQuantity = (state, productId) =>
   state.quantityById[productId] || 0
 
+// export const getAddedIds = state => state.addedIds
 export const getAddedIds = state => Object.keys(state.quantityById)
+
 
 const cart = (state = initialState, action) => {
   switch (action.type) {
