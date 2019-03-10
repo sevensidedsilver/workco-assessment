@@ -14,4 +14,32 @@ hr {
   span {
     font-family: "Open Sans", Arial
   }
+  p {
+    font-size: .9em;
+  }
+}
+
+.titleHead {
+    display: flex;
+    flex-direction: column;
+    * {
+        margin: 9px 0 0 0;
+    }
+}
+
+
+@media only screen and (min-width: 690px) {
+  .App {
+    margin: 0px 40px;
+  }
+  .titleHead {
+      flex-direction: row;
+      justify-content: space-between;
+      p {
+          margin-top: 8px;
+      }
+  }
+
+
+
 }

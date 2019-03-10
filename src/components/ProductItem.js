@@ -6,17 +6,21 @@ import staticImage from '../constants/image.jpg'
 
 const ProductItem = ({ product, onAddToCartClicked }) => (
   <div style={{ marginBottom: 20 }} className="productItem">
-    <img className="productImage" src={staticImage}/>
-    <Product
-      title={product.title}
-      price={product.price}
-      inventory={product.inventory} />
-    <button
-      className="addToCart"
-      onClick={onAddToCartClicked}
-      disabled={product.inventory > 0 ? '' : 'disabled'}>
-      {product.inventory > 0 ? 'Add to cart' : 'Sold Out'}
-    </button>
+    <div className="imageContain">
+      <img className="productImage" src={staticImage}/>
+    </div>  
+    <div className="productDetails">
+      <Product
+        title={product.title}
+        price={product.price}
+        inventory={product.inventory} />
+      <button
+        className="addToCart"
+        onClick={onAddToCartClicked}
+        disabled={product.inventory > 0 ? '' : 'disabled'}>
+        {product.inventory > 0 ? 'Add to cart' : 'Sold Out'}
+      </button>
+    </div>
   </div>
 )
 

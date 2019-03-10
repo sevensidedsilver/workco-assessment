@@ -15,8 +15,10 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 const App = () => (
   <div className="App">
-    <h2>Acme Store</h2>
-    <p><FontAwesomeIcon icon={faShoppingCart} /> Your cart is empty</p>
+    <div className="titleHead">
+      <h2>Acme Store</h2>
+      <p><FontAwesomeIcon icon={faShoppingCart} /> Your cart is empty</p>
+    </div>
     <hr/>
     <ProductsContainer />
     <hr/>
