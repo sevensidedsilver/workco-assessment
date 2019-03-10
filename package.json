@@ -8,6 +8,10 @@
     "react-test-renderer": "^15.6.2"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-solid-svg-icons": "^5.7.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "node-sass": "^4.11.0",
     "prop-types": "^15.6.2",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
@@ -27,5 +31,17 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "description": "This repository showcases my skills to a potential employer via a specific set of tasks outlined in the /tasks folder.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sevensidedsilver/workco-assessment.git"
+  },
+  "author": "sean",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sevensidedsilver/workco-assessment/issues"
+  },
+  "homepage": "https://github.com/sevensidedsilver/workco-assessment#readme"
 }
