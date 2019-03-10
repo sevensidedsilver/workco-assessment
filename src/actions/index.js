@@ -24,7 +24,7 @@ export const addToCart = productId => (dispatch, getState) => {
 }
 
 const removeFromCartUnsafe = productId => ({
-  type: types.ADD_TO_CART,
+  type: types.REMOVE_FROM_CART,
   productId
 })
 
