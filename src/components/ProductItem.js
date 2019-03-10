@@ -8,7 +8,7 @@ const ProductItem = ({ product, onAddToCartClicked }) => (
   <div style={{ marginBottom: 20 }} className="productItem">
     <div className="imageContain">
       <img className="productImage" src={staticImage}/>
-    </div>  
+    </div>
     <div className="productDetails">
       <Product
         title={product.title}
@@ -18,7 +18,7 @@ const ProductItem = ({ product, onAddToCartClicked }) => (
         className="addToCart"
         onClick={onAddToCartClicked}
         disabled={product.inventory > 0 ? '' : 'disabled'}>
-        {product.inventory > 0 ? 'Add to cart' : 'Sold Out'}
+        {product.inventory > 0 ? 'ADD TO CART' : 'Sold Out'}
       </button>
     </div>
   </div>
