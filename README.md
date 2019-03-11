@@ -21,9 +21,14 @@ Don't forget to run 'npm i' and 'yarn install' before running 'yarn start'
 
 Things I want to get done but may not have time for:
 
-fix prop error
-fix minor warnings
+fix prop error DONE
+
+fix minor warnings DONE
+
 style the cart better
+
 update the inventory in the store when removing item from cart
+
 remove "your cart is empty" when items are in Cart
+
 add "out of stock" for store items with less than 1 inventory
