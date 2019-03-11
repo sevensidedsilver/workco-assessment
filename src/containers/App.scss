@@ -27,10 +27,14 @@ hr {
 }
 
 .cartContain {
-    width: 92vw;
+    width: 93vw;
     margin-left: -15px;
     padding: 20px 16px 0;
     background: white;
+}
+
+.cartCounter {
+    display: flex;
 }
 
 .defaultCart {
@@ -53,6 +57,10 @@ button.checkout {
     font-size: 1em;
 }
 
+.remove {
+  color: red;
+  cursor: pointer;
+}
 
 @media only screen and (min-width: 690px) {
   .App {
@@ -73,7 +81,7 @@ button.checkout {
     padding-left: 55px;
   }
   .cartContain {
-      width: 100vw;
+      width: 96vw;
       margin-left: -54px;
   }
 

@@ -20,7 +20,7 @@ const Cart  = ({ products, total, onCheckoutClicked, removeFromCart, handleAdd, 
           quantity={product.quantity}
 
         />
-        <button onClick={() => removeFromCart(product.id)} />
+        <p className="remove" onClick={() => removeFromCart(product.id)}>Remove</p>
         <CartCounter
           count={product.quantity}
           productId={product.id}

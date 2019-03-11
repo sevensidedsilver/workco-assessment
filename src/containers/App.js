@@ -1,7 +1,10 @@
 import React from 'react'
 import ProductsContainer from './ProductsContainer'
 import CartContainer from './CartContainer'
+import { connect } from 'react-redux'
 
+
+import { getCartProducts } from '../reducers'
 
 import './App.scss'
 
@@ -12,7 +15,7 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 
 
-const App = () => (
+const App = ({products}) => (
   <div className="App">
     <div className="titleHead">
       <h2>Acme Store</h2>
@@ -25,4 +28,10 @@ const App = () => (
   </div>
 )
 
-export default App
+const mapStateToProps = (state) => ({
+  products: getCartProducts(state)
+})
+
+export default connect(
+  mapStateToProps
+)(App)
