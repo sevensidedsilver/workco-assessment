@@ -4,6 +4,8 @@ This repository showcases my skills to a potential employer via a specific set o
 
 Each task corresponds to a development branch and each will be merged when they're all completed - roughly simulating an agile team working on separate tasks before submitting pull requests.
 
+Don't forget to run 'npm i' and 'yarn install' before running 'yarn start'
+
 ## Tasks:
 
 1. Implement responsive design as per the sketch provided
@@ -14,3 +16,5 @@ Each task corresponds to a development branch and each will be merged when they'
 
 3. Integrate products from JSON endpoint
 (product-api branch)
+
+
