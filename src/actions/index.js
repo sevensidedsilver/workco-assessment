@@ -7,7 +7,7 @@ const receiveProducts = products => ({
 })
 
 export const getAllProducts = () => dispatch => {
-  shop.getProducts(products => {
+  shop.getAPI(products => {
     dispatch(receiveProducts(products))
   })
 }
@@ -22,6 +22,29 @@ export const addToCart = productId => (dispatch, getState) => {
     dispatch(addToCartUnsafe(productId))
   }
 }
+
+const removeFromCartUnsafe = productId => ({
+  type: types.REMOVE_FROM_CART,
+  productId
+})
+
+export const removeFromCart = productId => (dispatch, getState) => {
+  if (getState().products.byId[productId].inventory > 0) {
+    dispatch(removeFromCartUnsafe(productId))
+  }
+}
+
+export const handleAdd = (count, productId) => ({
+  type: types.HANDLE_ADD,
+  count,
+  productId
+})
+
+export const handleSubtract = (count, productId) => ({
+  type: types.HANDLE_SUBTRACT,
+  count,
+  productId
+})
 
 export const checkout = products => (dispatch, getState) => {
   const { cart } = getState()
