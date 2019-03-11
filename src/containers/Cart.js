@@ -5,6 +5,9 @@ import { removeFromCart, handleAdd, handleSubtract } from '../actions'
 import { getTotal, getCartProducts } from '../reducers'
 import Product from '../components/Product'
 import CartCounter from './CartCounter'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+
 
 const Cart  = ({ products, total, onCheckoutClicked, removeFromCart, handleAdd, handleSubtract }) => {
   const hasProducts = products.length > 0
@@ -27,17 +30,24 @@ const Cart  = ({ products, total, onCheckoutClicked, removeFromCart, handleAdd, 
       </div>
     )
   ) : (
-    <em>Please add some products to cart.</em>
+    <div className="defaultCart">
+      <FontAwesomeIcon icon={faShoppingCart} />
+      <em>Please add some products</em>
+      <em>to your cart.</em>
+    </div>
   )
 
   return (
     <div>
       <h3>Your Cart</h3>
+      <hr />
       <div>{nodes}</div>
       <p>Total: &#36;{total}</p>
-      <button onClick={onCheckoutClicked}
+      <button
+        className="checkout"
+        onClick={onCheckoutClicked}
         disabled={hasProducts ? '' : 'disabled'}>
-        Checkout
+        CHECKOUT
       </button>
     </div>
   )

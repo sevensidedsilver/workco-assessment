@@ -25,6 +25,26 @@ hr {
     }
 }
 
+.defaultCart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20% 0;
+    svg.svg-inline--fa.fa-shopping-cart.fa-w-18 {
+    font-size: 4em;
+    margin-bottom: 21px;
+  }
+}
+
+button.checkout {
+    width: 109vw;
+    height: 53px;
+    margin-left: -23px;
+    background: #5E97D1;
+    color: white;
+    font-size: 1em;
+}
+
 
 @media only screen and (min-width: 690px) {
   .App {
@@ -37,6 +57,14 @@ hr {
           margin-top: 8px;
       }
   }
+  button.checkout {
+    width: 200px;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    padding-left: 55px;
+  }
+
 
 
 
