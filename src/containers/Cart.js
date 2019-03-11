@@ -38,11 +38,18 @@ const Cart  = ({ products, total, onCheckoutClicked, removeFromCart, handleAdd, 
   )
 
   return (
-    <div>
+    <div className="cartContain">
       <h3>Your Cart</h3>
       <hr />
       <div>{nodes}</div>
-      <p>Total: &#36;{total}</p>
+      <hr />
+      <div className="cartTotal">
+        <p>Subtotal: {total}</p>
+        <p>Taxes: {(total * .065).toFixed(2)}</p>
+        <hr/>
+        <p>Total: &#36;{(parseFloat(total) + parseFloat((total * .065).toFixed(2)))}</p>
+      </div>
+
       <button
         className="checkout"
         onClick={onCheckoutClicked}

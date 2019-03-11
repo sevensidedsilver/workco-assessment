@@ -1,5 +1,6 @@
 body {
     background-color: #F5F5F5;
+    overflow-x: hidden;
 }
 hr {
     opacity: 0.3;
@@ -25,6 +26,13 @@ hr {
     }
 }
 
+.cartContain {
+    width: 92vw;
+    margin-left: -15px;
+    padding: 20px 16px 0;
+    background: white;
+}
+
 .defaultCart {
     display: flex;
     flex-direction: column;
@@ -37,7 +45,7 @@ hr {
 }
 
 button.checkout {
-    width: 109vw;
+    width: 102vw;
     height: 53px;
     margin-left: -23px;
     background: #5E97D1;
@@ -64,8 +72,10 @@ button.checkout {
     text-align: center;
     padding-left: 55px;
   }
-
-
+  .cartContain {
+      width: 100vw;
+      margin-left: -54px;
+  }
 
 
 }
