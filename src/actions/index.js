@@ -34,6 +34,17 @@ export const removeFromCart = productId => (dispatch, getState) => {
   }
 }
 
+export const handleAdd = (count, productId) => ({
+  type: types.HANDLE_ADD,
+  count,
+  productId
+})
+
+export const handleSubtract = (count, productId) => ({
+  type: types.HANDLE_SUBTRACT,
+  count,
+  productId
+})
 
 export const checkout = products => (dispatch, getState) => {
   const { cart } = getState()

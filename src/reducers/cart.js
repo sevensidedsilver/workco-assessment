@@ -3,7 +3,9 @@ import {
   ADD_TO_CART,
   CHECKOUT_REQUEST,
   CHECKOUT_FAILURE,
-  REMOVE_FROM_CART
+  REMOVE_FROM_CART,
+  HANDLE_ADD,
+  HANDLE_SUBTRACT
 } from '../constants/ActionTypes'
 
 const initialState = {
@@ -39,6 +41,25 @@ const quantityById = (state = initialState.quantityById, action) => {
       }
     case REMOVE_FROM_CART:
       return omit(state, action.productId)
+
+    case HANDLE_ADD:
+      let updateCount = action.count + 1
+      let id = action.productId
+      return {...state,
+        [id]: updateCount
+        }
+
+    case HANDLE_SUBTRACT:
+      let newCount = action.count - 1
+      if (newCount < 1) {
+        return omit(state, action.productId)
+      } else {
+        return {...state,
+          [action.productId]: newCount
+          }
+      }
+
+
     default:
       return state
   }
@@ -62,6 +83,7 @@ const cart = (state = initialState, action) => {
         addedIds: addedIds(state.addedIds, action),
         quantityById: quantityById(state.quantityById, action)
       }
+
   }
 }
 

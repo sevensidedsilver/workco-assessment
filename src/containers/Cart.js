@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { removeFromCart } from '../actions'
+import { removeFromCart, handleAdd, handleSubtract } from '../actions'
 import { getTotal, getCartProducts } from '../reducers'
 import Product from '../components/Product'
 import CartCounter from './CartCounter'
 
-const Cart  = ({ products, total, onCheckoutClicked, removeFromCart }) => {
+const Cart  = ({ products, total, onCheckoutClicked, removeFromCart, handleAdd, handleSubtract }) => {
   const hasProducts = products.length > 0
   const nodes = hasProducts ? (
     products.map(product =>
@@ -21,6 +21,8 @@ const Cart  = ({ products, total, onCheckoutClicked, removeFromCart }) => {
         <CartCounter
           count={product.quantity}
           productId={product.id}
+          handleAdd={() => handleAdd(product.quantity, product.id)}
+          handleSubtract={() => handleSubtract(product.quantity, product.id)}
           />
       </div>
     )
@@ -54,5 +56,5 @@ const mapStateToProps = (state) => ({
 
 export default connect(
   mapStateToProps,
-  { removeFromCart }
+  { removeFromCart, handleAdd, handleSubtract }
 )(Cart)
