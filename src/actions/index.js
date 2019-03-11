@@ -1,5 +1,6 @@
 import shop from '../api/shop'
 import * as types from '../constants/ActionTypes'
+import fetcher from '../api/fetch'
 
 const receiveProducts = products => ({
   type: types.RECEIVE_PRODUCTS,
