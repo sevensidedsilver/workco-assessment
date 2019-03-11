@@ -17,4 +17,12 @@ Don't forget to run 'npm i' and 'yarn install' before running 'yarn start'
 3. Integrate products from JSON endpoint
 (product-api branch)
 
+### Still to do:
 
+Things I want to get done but may not have time for:
+
+fix prop error
+fix minor warnings
+style the cart better
+update the inventory in the store when removing item from cart
+remove "your cart is empty" when items are in Cart
