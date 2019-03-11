@@ -26,3 +26,4 @@ fix minor warnings
 style the cart better
 update the inventory in the store when removing item from cart
 remove "your cart is empty" when items are in Cart
+add "out of stock" for store items with less than 1 inventory
