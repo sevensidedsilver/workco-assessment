@@ -29,6 +29,6 @@ style the cart better
 
 update the inventory in the store when removing item from cart
 
-remove "your cart is empty" when items are in Cart
+remove "your cart is empty" when items are in Cart DONE
 
 add "out of stock" for store items with less than 1 inventory
