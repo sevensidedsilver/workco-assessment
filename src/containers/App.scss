@@ -1,0 +1,43 @@
+body {
+    background-color: #F5F5F5;
+}
+hr {
+    opacity: 0.3;
+}
+
+.App {
+
+    h1, h2, h3, p, div {
+      font-family: "Chivo", "Lucida Sans Unicode", "Lucida Grande", sans-serif
+  }
+
+  span {
+    font-family: "Open Sans", Arial
+  }
+
+}
+
+.titleHead {
+    display: flex;
+    flex-direction: column;
+    * {
+        margin: 9px 0 0 0;
+    }
+}
+
+
+@media only screen and (min-width: 690px) {
+  .App {
+    margin: 0px 40px;
+  }
+  .titleHead {
+      flex-direction: row;
+      justify-content: space-between;
+      p {
+          margin-top: 8px;
+      }
+  }
+
+
+
+}

@@ -2,8 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Product = ({ price, inventory, title }) => (
-  <div>
-    {title} - &#36;{price}{inventory ? ` x ${inventory}` : null}
+  <div className="product">
+    <div className="productHead">
+      <h3 className="productName">{title}</h3>
+      <p className="price">&#36;{price}</p>
+    </div>
+      <p className="count">{inventory ? `${inventory} REMAINING` : null}</p>
   </div>
 )
 
