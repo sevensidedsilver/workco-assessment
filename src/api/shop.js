@@ -9,7 +9,7 @@ export default {
   buyProducts: (payload, cb, timeout) => setTimeout(() => cb(), timeout || TIMEOUT),
   getAPI: (cb, timeout) =>
       $.getJSON("http://tech.work.co/shopping-cart/products.json", data => {
-        console.log(data)
+
         let returnData =[]
         data.forEach(item => {
           returnData.push({
@@ -19,6 +19,7 @@ export default {
             inventory: item.inventory
           })
         })
+        console.log(returnData)
 
         cb(returnData);
       })

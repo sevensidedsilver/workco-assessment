@@ -6,7 +6,6 @@ import CartContainer from './CartContainer'
 import './App.scss'
 
 
-import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
